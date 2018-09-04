@@ -1,6 +1,6 @@
-#Git Commands and Workflow
+# Git Commands and Workflow
 
-###Start-Up
+## Start-Up
 
 Git is the most widely used version control system in the world. People use Git as a **tool** for managing source code history. Git also acts as the tool utilized by the GitHub **service**. GitHub provides hosting for Git repositories. We can consider it the **central** copy of Git repositories. 
 
@@ -16,7 +16,7 @@ To **clone** a GitHub repository you must first navigate to the main page of the
 git clone https://github.com/CS383-Dream-Team/Chasing-the-End
 ```
 
-###Workflow
+## Workflow
 
 You can propose local code changes (add to the **Index**) using
 ```
@@ -82,7 +82,7 @@ git diff <Source Branch> <Targe Branch>
 ```
 to preview changes before merging them.
 
-###### Damage Control
+### Damage Control
 
 In the case that something seriously wrong happens, you can drop all local changes and commits by **fetching** the latest history and resetting
 ```

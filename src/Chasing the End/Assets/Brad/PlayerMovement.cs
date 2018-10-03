@@ -3,7 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public interface ICharacterController
+{
+    void MoveCharacter();
+}
+
+public class PlayerMovement : MonoBehaviour, ICharacterController
 {
     // Called during initialization.
     public void Start()
@@ -12,8 +17,12 @@ public class PlayerMovement : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame.
-    public void Update()
+    public void FixedUpdate()
+    {
+        MoveCharacter();
+    }
+
+    public void MoveCharacter()
     {
         //Get the current velocity from our rigidbody property.
         Vector2 velocity = _rigidbody.velocity;
@@ -44,17 +53,10 @@ public class PlayerMovement : MonoBehaviour
         _rigidbody.velocity = velocity;
     }
 
-    //These are the fields we want to make visible to the inspector.
-    [SerializeField]
-    private KeyCode _moveUp = KeyCode.W;
-    [SerializeField]
-    private KeyCode _moveDown = KeyCode.S;
-    [SerializeField]
-    private KeyCode _moveLeft = KeyCode.A;
-    [SerializeField]
-    private KeyCode _moveRight = KeyCode.D;
-    [SerializeField]
-    private float _speed = 10.0f;
-
+    private readonly KeyCode _moveUp = KeyCode.W;
+    private readonly KeyCode _moveDown = KeyCode.S;
+    private readonly KeyCode _moveLeft = KeyCode.A;
+    private readonly KeyCode _moveRight = KeyCode.D;
+    private readonly float _speed = 10.0f;
     private Rigidbody2D _rigidbody;
 }

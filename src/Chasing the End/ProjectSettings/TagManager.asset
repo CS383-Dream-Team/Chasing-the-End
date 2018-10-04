@@ -15,7 +15,7 @@ TagManager:
   - 
   - 
   - Background Image
-  - 
+  - hiddenPath
   - 
   - 
   - 
@@ -44,6 +44,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 3840573291
+    locked: 0
+  - name: Hidden Layer
+    uniqueID: 1230012243
     locked: 0
   - name: Foreground
     uniqueID: 838553511

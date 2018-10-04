@@ -31,11 +31,6 @@ public class hiddenMenu : MonoBehaviour
             {
                 m_MainCamera.cullingMask ^= 1 << LayerMask.NameToLayer("hiddenPath");
             }
-            if (GUI.Button(new Rect(40, 180, 200, 20), "Turn on Path"))
-            {
-// m_MainCamera.cullingMask &= 1 ~(<< LayerMask.NameToLayer("hiddenPath"));
-            }
-
             if (GUI.Button(new Rect(40, 270, 200, 20), "Close this menu"))
             {
                 cheat = false;

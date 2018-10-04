@@ -27,19 +27,19 @@ public class PlayerMovement : MonoBehaviour, ICharacterController
         //Get the current velocity from our rigidbody property.
         Vector2 velocity = _rigidbody.velocity;
 
-        if (Input.GetKey(_moveUp))
+        if (Input.GetAxisRaw("Vertical") > 0.0f)
         {
             velocity.y = _speed;
         }
-        else if (Input.GetKey(_moveDown))
+        else if (Input.GetAxisRaw("Vertical") < 0.0f)
         {
             velocity.y = -_speed;
         }
-        else if (Input.GetKey(_moveLeft))
+        else if (Input.GetAxisRaw("Horizontal") < 0.0f)
         {
             velocity.x = -_speed;
         }
-        else if (Input.GetKey(_moveRight))
+        else if (Input.GetAxisRaw("Horizontal") > 0.0f)
         {
             velocity.x = _speed;
         }
@@ -53,10 +53,6 @@ public class PlayerMovement : MonoBehaviour, ICharacterController
         _rigidbody.velocity = velocity;
     }
 
-    private readonly KeyCode _moveUp = KeyCode.W;
-    private readonly KeyCode _moveDown = KeyCode.S;
-    private readonly KeyCode _moveLeft = KeyCode.A;
-    private readonly KeyCode _moveRight = KeyCode.D;
     private readonly float _speed = 10.0f;
     private Rigidbody2D _rigidbody;
 }

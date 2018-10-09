@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: New Animation
+  m_Name: BossAnimation
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -16,21 +16,45 @@ AnimationClip:
   m_PositionCurves: []
   m_ScaleCurves: []
   m_FloatCurves: []
-  m_PPtrCurves: []
-  m_SampleRate: 60
+  m_PPtrCurves:
+  - curve:
+    - time: 0
+      value: {fileID: 21300000, guid: ed94457ee73ab4b0fa1f27e77b106cb5, type: 3}
+    - time: 0.2
+      value: {fileID: 21300000, guid: 36b93e92cd3ce4682bbc29b553d6f3f8, type: 3}
+    - time: 0.4
+      value: {fileID: 21300000, guid: 3a0f20b7d269f45978a3b750abac1cc1, type: 3}
+    - time: 0.6
+      value: {fileID: 21300000, guid: 6755b69ce2efc415e964cd01f3bcb319, type: 3}
+    attribute: m_Sprite
+    path: 
+    classID: 212
+    script: {fileID: 0}
+  m_SampleRate: 5
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
-    genericBindings: []
-    pptrCurveMapping: []
+    genericBindings:
+    - serializedVersion: 2
+      path: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    pptrCurveMapping:
+    - {fileID: 21300000, guid: ed94457ee73ab4b0fa1f27e77b106cb5, type: 3}
+    - {fileID: 21300000, guid: 36b93e92cd3ce4682bbc29b553d6f3f8, type: 3}
+    - {fileID: 21300000, guid: 3a0f20b7d269f45978a3b750abac1cc1, type: 3}
+    - {fileID: 21300000, guid: 6755b69ce2efc415e964cd01f3bcb319, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1
+    m_StopTime: 0.8
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

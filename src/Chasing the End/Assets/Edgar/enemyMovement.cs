@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class enemyMovement : MonoBehaviour {
 
@@ -11,21 +12,15 @@ public class enemyMovement : MonoBehaviour {
 
       void OnCollisionEnter2D (Collision2D col)
     {
-        Debug.Log("In the collision function");
         if(col.gameObject.name == "Player")
         {
-            //player=null;
-            Camera.main.transform.parent = null;
-            //Destroy(col.gameObject);
-            Time.timeScale = 0;
+             SceneManager.LoadScene("GameOver");
         }
     }
-
 
 	void Start () {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();      //Object with the player tag
 	}
-	
 	
 	void Update () { //Move the enemy towsrds the player
         float horizontal = Input.GetAxis("Horizontal");
@@ -34,16 +29,12 @@ public class enemyMovement : MonoBehaviour {
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         }
       if(player.position.x > transform.position.x && !facingRight){
-     Debug.Log("in the loop");
-     Flip();
-     facingRight=true;
+        Flip();
+        facingRight=true;
      }else if(player.position.x < transform.position.x && facingRight ){
-      Debug.Log("in the different loop");
-      Flip();
-      facingRight=false;
-     //transform.localScale = new Vector3(-1,1,1);
-     }
-        
+        Flip();
+        facingRight=false;
+     }  
 	}
     private void Flip()
         {

@@ -17,7 +17,14 @@ public class MainMenu : MonoBehaviour {
     public void QuitGame()
     {
         Application.Quit();
-    } 
+    }
+
+
+    // this function is called to return to the main menu  
+    public void BackToMain()
+    {
+        SceneManager.LoadScene(0);
+    }
 
 
 }

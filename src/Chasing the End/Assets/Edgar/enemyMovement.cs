@@ -9,6 +9,18 @@ public class enemyMovement : MonoBehaviour {
     public float distanceToStop;
     private bool facingRight = false;
 
+      void OnCollisionEnter2D (Collision2D col)
+    {
+        Debug.Log("In the collision function");
+        if(col.gameObject.name == "Player")
+        {
+            //player=null;
+            Camera.main.transform.parent = null;
+            //Destroy(col.gameObject);
+            Time.timeScale = 0;
+        }
+    }
+
 
 	void Start () {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();      //Object with the player tag

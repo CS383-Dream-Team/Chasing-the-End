@@ -3,6 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary> this class is used in a singleton pattern there can only one instance
+/// of this class to maintain the numbers of items score or lives.
+/// this class is attached to an object that is persistent throught the 
+/// loading of scenes. The class checks everytime a new scene is loaded to 
+/// see if its the only active Scene. If this is the first one its set, then
+/// next scene that is loaded it will check again but if there is an already 
+/// active instance it will autodestroy to keep the first one only. 
+/// can keep track of items or objects througt loading screens. 
+/// </summary>
 public class Persistent : MonoBehaviour {
 
     static protected int Lives = 3;
@@ -47,14 +56,7 @@ public class Persistent : MonoBehaviour {
         return FirstInstance;
     }
 
-    /*
-     * Will remove this function to the the loader class scene..
-     * this fuunction just calls to load the main menu scene
-     */
-    public void BackToMain()
-    {
-        SceneManager.LoadScene(0);
-    }
+
 
     /* this gets called when the objects is about to be destroy i could save the player position and 
      position of the enemy if i needs to for the save. Optional, i could also reset to the last previous of the reset of the game*/
@@ -93,9 +95,4 @@ public class Persistent : MonoBehaviour {
             SceneManager.LoadScene("GameOver");    
     }
 
-
-    void Update()
-    {
-
-    }
 }

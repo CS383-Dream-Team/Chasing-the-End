@@ -36,40 +36,57 @@ public class Persistent : MonoBehaviour {
     }
 
 
+    //  
+    /// <summary>
+    /// this is to get and instance of the this class but cannot be changed with it 
+    ///  example Persistent class to get the score..it must be used it the
+    ///   Persistent.GetInstance().GetScore() to get the score from the class
+    /// </summary>
     public static Persistent GetInstance()
     {
         return FirstInstance;
     }
 
+    /*
+     * Will remove this function to the the loader class scene..
+     * this fuunction just calls to load the main menu scene
+     */
     public void BackToMain()
     {
         SceneManager.LoadScene(0);
     }
 
+    /* this gets called when the objects is about to be destroy i could save the player position and 
+     position of the enemy if i needs to for the save. Optional, i could also reset to the last previous of the reset of the game*/
     public void OnDestroy()
     {
         Debug.Log("GamePersist was destroy");
     }
 
 
-    // add to the score
+    // Adds Score to the scoreboard its public take
     public void AddScore(int  s)
     {
         Score += s;
     }
-
+    // gets the score from the class
     public int GetScore()
     {
         return Score;
      }
 
-
+    //  
+    /// <summary>
+    ///gets the number of lives from the class 
+    /// </summary>
+    /// <return> number of lives</return>
     public int GetLives()
     {
         return Lives;
     }
    
-     
+     // calls the game over class this will be move to the load scene class
+
     public void gameover()
     {
 

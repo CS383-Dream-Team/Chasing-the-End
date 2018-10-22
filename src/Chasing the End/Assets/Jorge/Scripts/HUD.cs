@@ -24,16 +24,16 @@ public class HUD : MonoBehaviour {
         foreach (Transform slot in InventoryParent)
         {
             //Debug.Log(slot.GetChild(0).GetChild(0).GetComponent<Image>());
-            
 
+           
             // gets the image componet in the the ItemImage
-            Image image = slot.GetChild(0).GetChild(0).GetComponent<Image>(); 
-
+            Image image = slot.GetChild(0).GetChild(0).GetComponent<Image>();
+         
             // checks if the image was previously enable
-            if (!image.enabled)
+            if (!image.enabled && image.sprite == null)
             {
-                Debug.Log("int being put");
-                Debug.Log(sender.ToString());
+              
+               // Debug.Log(sender.ToString());
                 image.enabled = true;
                 image.sprite = e.Item.Image;
 

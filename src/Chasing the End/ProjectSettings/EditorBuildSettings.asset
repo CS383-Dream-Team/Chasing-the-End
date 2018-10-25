@@ -17,6 +17,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level 3.unity
     guid: 52e0d54bb5680dc4da88045eaced419f
+  - enabled: 0
+    path: Assets/Luke/Scenes/testMainMenu.unity
+    guid: 9a307898504a6af43b27962da6e99ebe
+  - enabled: 0
+    path: Assets/Luke/Scenes/testLevel1.unity
+    guid: 48cdc14e58fffd64ba8117af17d2578d
+  - enabled: 0
+    path: Assets/Luke/Scenes/testLevel2.unity
+    guid: 6969b6d89116363499650e9a69c8cda9
+  - enabled: 0
+    path: Assets/Luke/Scenes/testLevel3.unity
+    guid: 25b8f803f73ab834b83811b69f7e6453
+  - enabled: 0
+    path: Assets/Luke/Scenes/testLevel4.unity
+    guid: ad49341589d0721459a7f2885853f195
+  - enabled: 0
+    path: Assets/Luke/Scenes/testLevel5.unity
+    guid: 750fd7f05b5d578439e963c086e6fdc7
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: e8cbdc20cb0bde048a0dba983b149504

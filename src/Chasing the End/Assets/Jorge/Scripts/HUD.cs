@@ -1,18 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 
 public class HUD : MonoBehaviour {
 
-
+    // Inventory public used that allows the inventory prefab to be drop in the inspector. 
+    // will receive the status of the inventory
     public Inventory Inventory;
 
 
 	// Use this for initialization
 	void Start () {
-        
+     
         Inventory.ItemAdded += IventoryScript_ItemAdded;	
 	}
 
@@ -23,9 +22,6 @@ public class HUD : MonoBehaviour {
         Transform InventoryParent = transform.Find("Inventory");
         foreach (Transform slot in InventoryParent)
         {
-            //Debug.Log(slot.GetChild(0).GetChild(0).GetComponent<Image>());
-
-           
             // gets the image componet in the the ItemImage
             Image image = slot.GetChild(0).GetChild(0).GetComponent<Image>();
          

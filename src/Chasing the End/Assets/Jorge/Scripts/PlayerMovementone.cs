@@ -58,15 +58,20 @@ public class PlayerMovementone : MonoBehaviour, ICharacterController
         _rigidbody.velocity = velocity;
     }
 
+    /// <summary>
+    /// This Function is called when the player collides with an item. IF 
+    /// the item has componet of type I_IventoruItem than i gets added to the 
+    /// inventory.
+    /// </summary>
+    /// <param name="hit"> Colllision2D details of the item</param>
     private void OnCollisionEnter2D(Collision2D hit)
     {
 
-        
-        
         I_IventoryItem item = hit.gameObject.GetComponent<I_IventoryItem>();
+        // if the item is the script the item proceds to call the iventory
         if (item != null)
         {
-            
+            // reference to the Additem function in the class inventory 
             inventory.AddItem(item);
         }
     }

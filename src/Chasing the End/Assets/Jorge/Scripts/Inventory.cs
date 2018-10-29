@@ -3,21 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class Inventory : MonoBehaviour {
+public class Inventory : MonoBehaviour
+{
     // is the amount of slots in the inventory.
     private const int SLOTS = 8;
     // a list of type inventory only avaliable to this class
     private List<I_IventoryItem> mItems = new List<I_IventoryItem>();
 
     // Event listener for when an item is added
-    public event EventHandler<InventoryEventArgs> ItemAdded; 
+    public event EventHandler<InventoryEventArgs> ItemAdded;
 
 
     /// <summary>
     /// This function adds a new item to the list to the list it also calls the inventoryEventArgs 
     /// to be displayed in the inventory.  
     /// </summary>
-    /// <param name="item"> Requiires an object of time I_IventoryItem</param>
+    /// <param name="item"> Requires an object of type I_IventoryItem</param>
     public void AddItem(I_IventoryItem item)
     {
         //  checks to make sure that no more items can be added than the max slots
@@ -29,7 +30,7 @@ public class Inventory : MonoBehaviour {
 
             // If the Item collider is set on the item colider will be disable and the item will  be added to 
             // list of mItems  and the item onpickup is called which disables the object
-            if(collider.enabled)
+            if (collider.enabled)
             {
                 collider.enabled = false;
                 mItems.Add(item);

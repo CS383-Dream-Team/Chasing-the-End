@@ -29,8 +29,8 @@ public class EnemyMovement : MonoBehaviour
 	
 	void Update () 
     { 
-        //Move the enemy towsrds the player
-        float horizontal = Input.GetAxis("Horizontal");
+        //Move the enemy towards the player
+        //float horizontal = Input.GetAxis("Horizontal");
 
         /*
          * If statement added so that the enemy is not on top of the player when they collide

@@ -18,7 +18,7 @@ public class Apple :MonoBehaviour, I_IventoryItem {
     {
         get
         {
-            return this.Name;
+            return "Apple";
         }
     }
 

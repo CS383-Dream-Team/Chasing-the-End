@@ -19,6 +19,7 @@ public class Persistent : MonoBehaviour {
     static protected string GameOver = "GameOVer";
     static protected Scene currentScene;
     static protected string retryPoint;
+    static protected List<I_IventoryItem> inventoryItems; 
 
     static Persistent FirstInstance;    //Static first instance is the only instance in the game 
                                         // its only created once in anyothers will be destroyed
@@ -31,15 +32,15 @@ public class Persistent : MonoBehaviour {
 
 
 
-        Debug.Log(FirstInstance);
+       // Debug.Log(FirstInstance);
 
         if (FirstInstance != null)
         {
-            Debug.Log("its getting destroy");
+            //Debug.Log("its getting destroy");
             Destroy(this.gameObject);
             return; 
         }
-        Debug.Log(FirstInstance);
+        //Debug.Log(FirstInstance);
         FirstInstance = this;
         GameObject.DontDestroyOnLoad(this.gameObject);
     }
@@ -63,6 +64,33 @@ public class Persistent : MonoBehaviour {
     public void OnDestroy()
     {
         Debug.Log("GamePersist was destroy");
+    }
+
+
+    /// <summary>
+    /// Items can be added to the inventory
+    /// </summary>
+    /// <param name="fromIventory"> Items must be a list to type I_IventoryItem </param>
+    public void SaveInventory(List<I_IventoryItem> fromIventory )
+    {
+
+        inventoryItems = fromIventory;
+        Debug.Log("it saved");
+
+       for(int i = 0; i<inventoryItems.Count; i++ )
+        {
+
+            Debug.Log("Name of the item" + inventoryItems[i].Name);
+        };
+    }
+
+    /// <summary>
+    /// Gets the items that in the instance througt the load scene.
+    /// </summary>
+    /// <returns>List of items as a List</returns>
+    public List<I_IventoryItem> GetItemsFromPersist()
+    {
+        return inventoryItems;
     }
 
 
@@ -92,7 +120,7 @@ public class Persistent : MonoBehaviour {
     public void gameover()
     {
 
-            SceneManager.LoadScene("GameOver");    
+            SceneManager.LoadScene("GameOver1");    
     }
 
 }

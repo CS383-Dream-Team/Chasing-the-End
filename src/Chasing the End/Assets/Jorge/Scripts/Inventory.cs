@@ -35,6 +35,7 @@ public class Inventory : MonoBehaviour
                 collider.enabled = false;
                 mItems.Add(item);
                 item.OnPickup();
+                
 
                 //calls the event for the item
                 if (ItemAdded != null)
@@ -44,4 +45,27 @@ public class Inventory : MonoBehaviour
             }
         }
     }
+
+    /// <summary>
+    /// Calls to save the items before they are destroyed.
+    /// </summary>
+    public void OnDestroy()
+    {
+        saveToPersist();
+    }
+
+
+    /// <summary>
+    /// saves the items on destroy to the persist for the next scene
+    /// </summary>
+    public void saveToPersist()
+    {
+        Debug.Log("saving to persist");
+        Persistent.GetInstance().SaveInventory(mItems);
+       
+
+    }
+
+
+
 }

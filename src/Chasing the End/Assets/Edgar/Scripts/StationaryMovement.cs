@@ -21,7 +21,7 @@ public class StationaryMovement : MonoBehaviour {
     // Use this for initialization
     void Start () 
     {
-        target = new Vector3(-10.0F, transform.position.y, 0.0f);
+        target = new Vector3(-100.0F, transform.position.y, 0.0f);
         {
             Door = GameObject.FindGameObjectWithTag("Door").GetComponent<Transform>();
         }

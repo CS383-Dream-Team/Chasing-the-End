@@ -8,6 +8,7 @@ TagManager:
   - GamePersistent
   - InventoryLayout
   - Apple
+  - Door
   layers:
   - Default
   - TransparentFX

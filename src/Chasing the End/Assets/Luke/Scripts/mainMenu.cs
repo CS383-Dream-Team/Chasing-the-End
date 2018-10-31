@@ -12,12 +12,12 @@ public class mainMenu : MonoBehaviour {
 
     public void loadTest2()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(6);
     }
 
     public void loadTest3()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(7);
     }
     public void loadTest4()
     {

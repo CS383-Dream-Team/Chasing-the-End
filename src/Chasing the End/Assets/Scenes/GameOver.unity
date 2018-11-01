@@ -1084,6 +1084,48 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 884914139}
   m_CullTransparentMesh: 0
+--- !u!1001 &1150546709
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4588337404304508, guid: 1fa813b6edec07e41b7c7146a6e9a010, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 311.33054
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588337404304508, guid: 1fa813b6edec07e41b7c7146a6e9a010, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 174.5006
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588337404304508, guid: 1fa813b6edec07e41b7c7146a6e9a010, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 8.00661
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588337404304508, guid: 1fa813b6edec07e41b7c7146a6e9a010, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588337404304508, guid: 1fa813b6edec07e41b7c7146a6e9a010, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588337404304508, guid: 1fa813b6edec07e41b7c7146a6e9a010, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588337404304508, guid: 1fa813b6edec07e41b7c7146a6e9a010, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588337404304508, guid: 1fa813b6edec07e41b7c7146a6e9a010, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1fa813b6edec07e41b7c7146a6e9a010, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1300757184
 GameObject:
   m_ObjectHideFlags: 0
@@ -1399,8 +1441,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: QuitGame
+      - m_Target: {fileID: 1350511855}
+        m_MethodName: retry
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 
 public class HUD : MonoBehaviour {
@@ -8,9 +10,12 @@ public class HUD : MonoBehaviour {
     // will receive the status of the inventory
     public Inventory Inventory;
 
+    
+    
 
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start () {
      
         Inventory.ItemAdded += IventoryScript_ItemAdded;	
 	}
@@ -37,5 +42,9 @@ public class HUD : MonoBehaviour {
             }
         }
     }
+
+
+
+
 
 }

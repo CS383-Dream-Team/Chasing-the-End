@@ -54,4 +54,19 @@ public class SceneLoader : MonoBehaviour {
     }
 
 
+
+
+    /// <summary>
+    /// Returns the name of the Active scene
+    /// </summary>
+    /// <returns>string Name of active scene</returns>
+    public string getCurrentSceneName()
+    {
+        Scene nameOfScene;
+        nameOfScene=SceneManager.GetActiveScene();
+
+        return nameOfScene.name; 
+    }
+
+
 }

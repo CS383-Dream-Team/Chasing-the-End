@@ -5,8 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
 
+
+    private SceneLoader load = new SceneLoader();
+
+
+
+
     // this function is called from the New game mainmenu canvas 
-	 public void PlayGame()
+    public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
@@ -26,5 +32,20 @@ public class MainMenu : MonoBehaviour {
         SceneManager.LoadScene(0);
     }
 
+
+
+    public void retry()
+    {
+        string againTry;
+        againTry = Persistent.GetInstance().GetRetryPoint();
+        if (againTry == null)
+        {
+            Debug.Log("Error loading scene has no name");
+        }
+        else
+        {
+            load.SceneToLoad(againTry);
+        }
+    }
 
 }

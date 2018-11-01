@@ -441,7 +441,7 @@ GameObject:
   - component: {fileID: 114962454318111810}
   - component: {fileID: 114611188391098902}
   m_Layer: 5
-  m_Name: HUDPersistent
+  m_Name: HUDPersistentOLD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -51,21 +51,46 @@ public class Inventory : MonoBehaviour
     /// </summary>
     public void OnDestroy()
     {
-        saveToPersist();
+
+       // saveIventoryToPersist();
     }
 
 
+
+
+    private void Start()
+    {
+        /*
+        if (Persistent.GetInstance().GetItemsFromPersist() != null)
+        {
+            List<I_IventoryItem> temp;
+            Debug.Log("recieved the items from persist");
+            temp = Persistent.GetInstance().GetItemsFromPersist();
+
+
+            mItems = temp;
+
+
+            for (int i = 0; i < temp.Count; i++)
+            {
+                Debug.Log(temp[i].Name);
+                AddItem(temp[i]);
+
+            }
+        }
+        */
+    }
+
+    /*
     /// <summary>
     /// saves the items on destroy to the persist for the next scene
     /// </summary>
-    public void saveToPersist()
+    public void saveIventoryToPersist()
     {
-        Debug.Log("saving to persist");
         Persistent.GetInstance().SaveInventory(mItems);
-       
-
+     
     }
 
 
-
+    */
 }

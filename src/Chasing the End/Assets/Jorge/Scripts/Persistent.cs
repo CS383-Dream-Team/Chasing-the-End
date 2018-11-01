@@ -14,10 +14,14 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class Persistent : MonoBehaviour {
 
+
+
     static protected int Lives = 3;
     static protected int Score = 0;
     static protected string GameOver = "GameOVer";
+
     static protected Scene currentScene;
+    static protected string nowScene;
     static protected string retryPoint;
     static protected List<I_IventoryItem> inventoryItems; 
 
@@ -26,23 +30,19 @@ public class Persistent : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
-        retryPoint = currentScene.name;
-        currentScene = SceneManager.GetActiveScene();
-
-
-
-       // Debug.Log(FirstInstance);
+        // saves the name of the current and last scene for retry point
+       
 
         if (FirstInstance != null)
         {
-            //Debug.Log("its getting destroy");
+        
             Destroy(this.gameObject);
             return; 
         }
-        //Debug.Log(FirstInstance);
+        
         FirstInstance = this;
         GameObject.DontDestroyOnLoad(this.gameObject);
+        SavecurrentScene();
     }
 
 
@@ -63,7 +63,64 @@ public class Persistent : MonoBehaviour {
      position of the enemy if i needs to for the save. Optional, i could also reset to the last previous of the reset of the game*/
     public void OnDestroy()
     {
-        Debug.Log("GamePersist was destroy");
+       
+
+        //Debug.Log("GamePersist was destroy");
+    }
+
+   
+    private void SavecurrentScene()
+    {
+        //SceneLoader temp = new SceneLoader();
+        currentScene = SceneManager.GetActiveScene();
+
+        //nowScene = temp.getCurrentSceneName();
+
+        nowScene = currentScene.name;
+       
+        retryPoint = nowScene;
+     
+        //retryPoint = currentScene.name;
+
+    }
+
+    /// <summary>
+    ///  gets the last scene. This can be used to for the retry point from the class
+    /// </summary>
+    /// <returns></returns>
+    public string GetRetryPoint()
+    {
+        return retryPoint;
+    }
+
+
+    // Adds Score to the scoreboard its public take
+    public void AddScore(int s)
+    {
+        Score += s;
+    }
+    // gets the score from the class
+    public int GetScore()
+    {
+        return Score;
+    }
+
+    //  
+    /// <summary>
+    ///gets the number of lives from the class 
+    /// </summary>
+    /// <return> number of lives</return>
+    public int GetLives()
+    {
+        return Lives;
+    }
+
+    // calls the game over class this will be move to the load scene class
+
+    public void gameover()
+    {
+
+        SceneManager.LoadScene("Work1");
     }
 
 
@@ -71,13 +128,13 @@ public class Persistent : MonoBehaviour {
     /// Items can be added to the inventory
     /// </summary>
     /// <param name="fromIventory"> Items must be a list to type I_IventoryItem </param>
-    public void SaveInventory(List<I_IventoryItem> fromIventory )
+    public void SaveInventory(List<I_IventoryItem> fromIventory)
     {
 
         inventoryItems = fromIventory;
         Debug.Log("it saved");
 
-       for(int i = 0; i<inventoryItems.Count; i++ )
+        for (int i = 0; i < inventoryItems.Count; i++)
         {
 
             Debug.Log("Name of the item" + inventoryItems[i].Name);
@@ -91,36 +148,7 @@ public class Persistent : MonoBehaviour {
     public List<I_IventoryItem> GetItemsFromPersist()
     {
         return inventoryItems;
-    }
 
-
-    // Adds Score to the scoreboard its public take
-    public void AddScore(int  s)
-    {
-        Score += s;
-    }
-    // gets the score from the class
-    public int GetScore()
-    {
-        return Score;
-     }
-
-    //  
-    /// <summary>
-    ///gets the number of lives from the class 
-    /// </summary>
-    /// <return> number of lives</return>
-    public int GetLives()
-    {
-        return Lives;
-    }
-   
-     // calls the game over class this will be move to the load scene class
-
-    public void gameover()
-    {
-
-            SceneManager.LoadScene("GameOver1");    
     }
 
 }

@@ -4928,8 +4928,8 @@ GameObject:
   - component: {fileID: 552054510}
   - component: {fileID: 552054509}
   - component: {fileID: 552054508}
-  - component: {fileID: 552054506}
   - component: {fileID: 552054507}
+  - component: {fileID: 552054506}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4940,8 +4940,7 @@ GameObject:
 --- !u!114 &552054506
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114299248399375304, guid: d43a3467dbb744fa383f5f36d98c5a31,
-    type: 2}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 552054505}
   m_Enabled: 1

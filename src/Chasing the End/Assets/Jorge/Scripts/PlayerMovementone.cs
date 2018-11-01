@@ -11,7 +11,7 @@ public interface ICharacterControllerone
 
 }
 
-public class PlayerMovementone : MonoBehaviour, ICharacterController
+public class PlayerMovementone : MonoBehaviour, IMovementController
 {
     public Inventory inventory;
 

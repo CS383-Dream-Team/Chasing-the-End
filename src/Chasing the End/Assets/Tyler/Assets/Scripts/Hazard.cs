@@ -54,9 +54,12 @@ public class Hazard : MonoBehaviour
     {
         if (coll.transform.tag == "Player")
         {
-            spriteRenderer.sprite = hitSprite;
-            GameManager.instance.RestartGame(3f);
-            StartCoroutine(SprayBlood(3f, coll.contacts[0].point, coll.gameObject));
+            SceneLoader sawBlade = new SceneLoader();
+            sawBlade.Gameover();
+            //spriteRenderer.sprite = hitSprite;
+            //GameManager.instance.RestartGame(3f);
+            //StartCoroutine(SprayBlood(3f, coll.contacts[0].point, coll.gameObject));
+
         }
         else
         {

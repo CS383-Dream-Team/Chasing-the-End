@@ -12,7 +12,8 @@ using UnityEngine.SceneManagement;
 /// active instance it will autodestroy to keep the first one only. 
 /// can keep track of items or objects througt loading screens. 
 /// </summary>
-public class Persistent : MonoBehaviour {
+public class Persistent : MonoBehaviour
+{
 
 
 
@@ -23,23 +24,24 @@ public class Persistent : MonoBehaviour {
     static protected Scene currentScene;
     static protected string nowScene;
     static protected string retryPoint;
-    static protected List<I_IventoryItem> inventoryItems; 
+    static protected List<I_IventoryItem> inventoryItems;
 
     static Persistent FirstInstance;    //Static first instance is the only instance in the game 
                                         // its only created once in anyothers will be destroyed
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         // saves the name of the current and last scene for retry point
-       
+
 
         if (FirstInstance != null)
         {
-        
+
             Destroy(this.gameObject);
-            return; 
+            return;
         }
-        
+
         FirstInstance = this;
         GameObject.DontDestroyOnLoad(this.gameObject);
         SavecurrentScene();
@@ -63,24 +65,18 @@ public class Persistent : MonoBehaviour {
      position of the enemy if i needs to for the save. Optional, i could also reset to the last previous of the reset of the game*/
     public void OnDestroy()
     {
-       
+
 
         //Debug.Log("GamePersist was destroy");
     }
 
-   
-    private void SavecurrentScene()
+
+    public void SavecurrentScene()
     {
-        //SceneLoader temp = new SceneLoader();
         currentScene = SceneManager.GetActiveScene();
 
-        //nowScene = temp.getCurrentSceneName();
-
         nowScene = currentScene.name;
-       
         retryPoint = nowScene;
-     
-        //retryPoint = currentScene.name;
 
     }
 

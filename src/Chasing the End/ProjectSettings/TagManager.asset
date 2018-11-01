@@ -9,6 +9,7 @@ TagManager:
   - InventoryLayout
   - Apple
   - Door
+  - Trap
   layers:
   - Default
   - TransparentFX

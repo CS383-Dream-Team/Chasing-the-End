@@ -3,6 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// The MovementController class contains the functionality for character movement.
+/// </summary>
+/// <remarks>
+/// MovementController requires the GameObject to have a Rigidbody component.
+/// </remarks>
+[RequireComponent(typeof(Rigidbody))]
 public class MovementController : MonoBehaviour, IMovementController
 {
     /// <summary>

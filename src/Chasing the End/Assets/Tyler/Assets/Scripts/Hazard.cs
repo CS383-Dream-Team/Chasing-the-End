@@ -45,11 +45,6 @@ public class Hazard : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    void Start()
-    {
-        GameManager.instance.PlayShootingSfx();
-    }
-
     void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.transform.tag == "Player")

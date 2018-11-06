@@ -35,7 +35,7 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(SpriteRenderer))]
 public class Hazard : MonoBehaviour
 {
-    public GameObject bloodSprayPrefab;
+    //public GameObject bloodSprayPrefab;
     public Sprite hitSprite;
     private SpriteRenderer spriteRenderer;
 
@@ -51,9 +51,6 @@ public class Hazard : MonoBehaviour
         {
             SceneLoader sawBlade = new SceneLoader();
             sawBlade.Gameover();
-            //spriteRenderer.sprite = hitSprite;
-            //GameManager.instance.RestartGame(3f);
-            //StartCoroutine(SprayBlood(3f, coll.contacts[0].point, coll.gameObject));
 
         }
         else
@@ -68,13 +65,5 @@ public class Hazard : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-    }
-
-    private IEnumerator SprayBlood(float delay, Vector2 position, GameObject player)
-    {
-        var bloodSpray = (GameObject)Instantiate(bloodSprayPrefab, position, Quaternion.identity);
-        Destroy(bloodSpray, 3f);
-        Destroy(player);
-        yield return new WaitForSeconds(delay);
     }
 }

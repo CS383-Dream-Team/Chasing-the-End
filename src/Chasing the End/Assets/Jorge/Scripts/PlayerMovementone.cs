@@ -58,6 +58,9 @@ public class PlayerMovementone : MonoBehaviour, IMovementController
         _rigidbody.velocity = velocity;
     }
 
+    public IEnumerator Dash() { return null; }
+    public void UpdateMovementAnimation() { }
+
     /// <summary>
     /// This Function is called when the player collides with an item. IF 
     /// the item has componet of type I_IventoruItem than i gets added to the 

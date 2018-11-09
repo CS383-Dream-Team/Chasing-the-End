@@ -33,6 +33,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     [SerializeField]
+    //Set Speed of projectile from trap
     private float speed = 5f;
 
     // Use this for initialization

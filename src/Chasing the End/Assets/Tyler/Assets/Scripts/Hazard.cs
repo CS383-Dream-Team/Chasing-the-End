@@ -34,8 +34,7 @@ using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(SpriteRenderer))]
 public class Hazard : MonoBehaviour
-{
-    //public GameObject bloodSprayPrefab;
+{   
     public Sprite hitSprite;
     private SpriteRenderer spriteRenderer;
 

@@ -33,16 +33,21 @@ using UnityEngine;
 
 public class ShootingTrap : MonoBehaviour
 {
+    //SerializeField allows for the values of variables or objects to be changed from within Unity
     [SerializeField]
+    //Which image is being used for projectile trap 
     private GameObject itemToShootPrefab;
 
     [SerializeField]
+    //Time until first projectile is fired
     private float shootStartDelay = 0.1f;
 
     [SerializeField]
+    //How often the projectile is shot
     private float shootInterval = 2f;
 
     [SerializeField]
+    //How long until projectile is destroyed after being shot
     private float destroyItemDelay = 3f;
 
     // Use this for initialization

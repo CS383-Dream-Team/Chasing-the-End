@@ -44,7 +44,10 @@ File -> Build Settings...
 - This should bring the build settings make sure there are two scenes in the Scenes In Build in the order
 ```
 Scenes/MainMenu
-Scenes/SampleScene
+Scenes/Level 1
+Scenes/Level 2
+Scenes/Level 3
+Scenes/GameOver
 ```
 - Click Build to build the game and select a location for the folders and the executable to be placed at and press **Select Folder**.
 - Once Unity has finish building the game, look in the folder where you place the executable named **Chasing the end.exe** double click and should bring up Interface with a few options like resolution click **Play! and Enjoy!!!**

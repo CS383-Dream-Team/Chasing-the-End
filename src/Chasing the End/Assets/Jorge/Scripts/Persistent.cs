@@ -14,9 +14,6 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class Persistent : MonoBehaviour
 {
-
-
-
     static protected int Lives = 3;
     static protected int Score = 0;
     static protected string GameOver = "GameOVer";
@@ -101,50 +98,5 @@ public class Persistent : MonoBehaviour
         return Score;
     }
 
-    //  
-    /// <summary>
-    ///gets the number of lives from the class 
-    /// </summary>
-    /// <return> number of lives</return>
-    public int GetLives()
-    {
-        return Lives;
-    }
-
-    // calls the game over class this will be move to the load scene class
-
-    public void gameover()
-    {
-
-        SceneManager.LoadScene("Work1");
-    }
-
-
-    /// <summary>
-    /// Items can be added to the inventory
-    /// </summary>
-    /// <param name="fromIventory"> Items must be a list to type I_IventoryItem </param>
-    public void SaveInventory(List<I_IventoryItem> fromIventory)
-    {
-
-        inventoryItems = fromIventory;
-        Debug.Log("it saved");
-
-        for (int i = 0; i < inventoryItems.Count; i++)
-        {
-
-            Debug.Log("Name of the item" + inventoryItems[i].Name);
-        };
-    }
-
-    /// <summary>
-    /// Gets the items that in the instance througt the load scene.
-    /// </summary>
-    /// <returns>List of items as a List</returns>
-    public List<I_IventoryItem> GetItemsFromPersist()
-    {
-        return inventoryItems;
-
-    }
 
 }

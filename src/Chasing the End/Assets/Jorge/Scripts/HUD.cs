@@ -47,10 +47,31 @@ public class HUD : MonoBehaviour
 
 
 
+
+
+
+
     private void OnDestroy()
     {
+
         Persistent.GetInstance().SavecurrentScene();
 
+    }
+
+     void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Backspace))
+        {
+           // string jorge = GetComponentInChildren<TMPro.TextMeshProUGUI>().text;
+            //Transform Parent = transform.Find("GameMenu");
+            //Debug.Log(jorge);
+            
+            // GameObject one = GetComponent<GameMene>();
+
+//            Parent.disable;
+            //Debug.Log(Parent.GetChild(0).name);
+            Debug.Log("calling the backspace button");
+        }
     }
 
 

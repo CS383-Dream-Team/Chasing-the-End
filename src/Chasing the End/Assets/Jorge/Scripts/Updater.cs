@@ -24,7 +24,7 @@ public class Updater : MonoBehaviour {
         */
 
         // this works faster than having to fing the object
-        GetComponent<TMPro.TextMeshProUGUI>().text = "Score: " + Persistent.GetInstance().GetScore() + " Lives: " + Persistent.GetInstance().GetLives();
+       // GetComponent<TMPro.TextMeshProUGUI>().text = "Score: " + Persistent.GetInstance().GetScore() + " Lives: " + Persistent.GetInstance().GetLives();
 
     
     }

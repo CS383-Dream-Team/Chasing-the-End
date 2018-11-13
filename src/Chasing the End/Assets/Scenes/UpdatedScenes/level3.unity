@@ -5340,6 +5340,7 @@ GameObject:
   - component: {fileID: 831403793}
   - component: {fileID: 831403792}
   - component: {fileID: 831403791}
+  - component: {fileID: 831403795}
   m_Layer: 0
   m_Name: Circle Key
   m_TagString: Untagged
@@ -5451,6 +5452,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &831403795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 831403790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4881f0a3ecce4834960b1a6970bf798, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageFromObject: {fileID: 21300000, guid: 010c453714f970a45997e5944a9c6499, type: 3}
 --- !u!1001 &856226683
 Prefab:
   m_ObjectHideFlags: 0
@@ -5510,6 +5523,7 @@ GameObject:
   - component: {fileID: 882162735}
   - component: {fileID: 882162734}
   - component: {fileID: 882162733}
+  - component: {fileID: 882162737}
   m_Layer: 0
   m_Name: Heart Key
   m_TagString: Untagged
@@ -5621,6 +5635,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &882162737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 882162732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4881f0a3ecce4834960b1a6970bf798, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageFromObject: {fileID: 21300000, guid: 42d11b4eed638b04786c1d57add4f5a3, type: 3}
 --- !u!1001 &930084618
 Prefab:
   m_ObjectHideFlags: 0
@@ -8454,6 +8480,7 @@ GameObject:
   - component: {fileID: 2042210970}
   - component: {fileID: 2042210969}
   - component: {fileID: 2042210968}
+  - component: {fileID: 2042210972}
   m_Layer: 0
   m_Name: Skeleton Key
   m_TagString: Untagged
@@ -8565,6 +8592,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2042210972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2042210967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4881f0a3ecce4834960b1a6970bf798, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageFromObject: {fileID: 21300000, guid: c9e15a0a2a779be43afae04c7d893bb9, type: 3}
 --- !u!1 &2115947576
 GameObject:
   m_ObjectHideFlags: 0

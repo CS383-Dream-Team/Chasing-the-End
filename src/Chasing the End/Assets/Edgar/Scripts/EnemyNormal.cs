@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //This class inherits all from Enemy
-public class NormalEnemy : Enemy 
+public class EnemyNormal : Enemy 
 {
 	// Use this for initialization
 	public void Start () 

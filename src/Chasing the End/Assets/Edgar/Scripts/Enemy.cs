@@ -1,6 +1,8 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ * This is the main enemy class used to
+ * Inherit the player, speed, and which
+ * Way the enemy is facing.
+ */
 using UnityEngine;
 using UnityEngine.SceneManagement;
 

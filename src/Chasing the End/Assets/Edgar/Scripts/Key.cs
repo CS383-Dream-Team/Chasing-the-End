@@ -1,5 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ * This script was created by Jorge. I simply used the code to 
+ * create a last minute fix for item interaction with the keys 
+ * for the week 5 class Demo. 
+ */
 using UnityEngine;
 
 

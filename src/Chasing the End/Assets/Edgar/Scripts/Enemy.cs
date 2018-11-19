@@ -1,12 +1,12 @@
 ﻿/*
- * This is the main enemy class used to
- * Inherit the player, speed, and which
- * Way the enemy is facing.
+ * This is the main enemy class used to set the following variables and bool:
+ * speed, player, distanceToStop, and facingRight.
+ * The only variable that can be chamged is the speed of the enemy.
  */
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-//Main enemy class
 public class Enemy : MonoBehaviour 
 {
     protected Transform player; 
@@ -15,10 +15,11 @@ public class Enemy : MonoBehaviour
     protected bool facingRight = false;
 
     /// <summary>
-    ///Unity on collison function, using the player tag
-    /// to detect collision btween "player" and "enemy"
+    /// Unity on collison function. The main character must have the "Player" tag
+    /// for this function to work properly. OnCollision working properly will trigger
+    /// the "GameOver" scene.
     /// </summary>
-    public void OnCollisionEnter2D(Collision2D col)
+    virtual public void OnCollisionEnter2D(Collision2D col)
     {
         if (col.transform.tag == "Player")
         {
@@ -26,16 +27,15 @@ public class Enemy : MonoBehaviour
         }
     }
 
-      
     /// <summary>
-    /// This is a function to flip the enemy ledt and right
-    /// When following the player
+    /// This function will flip the enemy to face correctly left or right when
+    /// following the main character. To do so, it multiplies the x position by -1.
     /// </summary>
-    public void Flip()
+    virtual public void Flip()
     {
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
+        Vector3 directionFacing = transform.localScale;
+        directionFacing.x *= -1;
+        transform.localScale = directionFacing;
     }
 }
 

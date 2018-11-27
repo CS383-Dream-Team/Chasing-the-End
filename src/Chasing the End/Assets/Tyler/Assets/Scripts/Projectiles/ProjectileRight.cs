@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Inherit Speed field from Projectile but allows new direction.
 public class ProjectileRight : Projectile {
 
 	// Use this for initialization
@@ -10,6 +11,7 @@ public class ProjectileRight : Projectile {
 	}
 	
 	// Update is called once per frame
+    // Setting direction of projectile to be shot
 	void Update ()
     {
         transform.position += transform.right * Time.deltaTime * speed;

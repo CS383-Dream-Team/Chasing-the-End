@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Inherit Speed field from Projectile but allows new direction.
 public class ProjectileUp : Projectile {
 
 	// Use this for initialization

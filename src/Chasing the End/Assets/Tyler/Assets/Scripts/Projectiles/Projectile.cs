@@ -1,4 +1,4 @@
-﻿
+﻿//Used as parent for inheritence for different directions with traps
 using UnityEngine;
 
 public class Projectile : MonoBehaviour

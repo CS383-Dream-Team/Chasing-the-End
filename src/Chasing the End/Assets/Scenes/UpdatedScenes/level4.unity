@@ -34049,7 +34049,7 @@ GameObject:
   - component: {fileID: 2092824798}
   - component: {fileID: 2092824797}
   m_Layer: 0
-  m_Name: Collision
+  m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

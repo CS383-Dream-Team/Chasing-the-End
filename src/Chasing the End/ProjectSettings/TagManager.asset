@@ -10,6 +10,7 @@ TagManager:
   - Apple
   - Door
   - Trap
+  - Circle Key
   layers:
   - Default
   - TransparentFX

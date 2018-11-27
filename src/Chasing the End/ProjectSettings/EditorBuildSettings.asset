@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 3cb21db40f714e14c8307b20ccd31243
   - enabled: 0
-    path: Assets/Edgar/Demo/Menu.unity
-    guid: d96ad3f78cc184de8a38b6dddcc46a2a
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Scenes/Level 1.unity
     guid: b320f1720f5384642b205e994c911d50
@@ -53,7 +53,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: e8cbdc20cb0bde048a0dba983b149504
-  - enabled: 0
-    path: Assets/Edgar/Credits/Credits.unity
+  - enabled: 1
+    path: Assets/Scenes/UpdatedScenes/Credits.unity
     guid: 761bc4080c70349d4b6a30f71f1c26a4
   m_configObjects: {}

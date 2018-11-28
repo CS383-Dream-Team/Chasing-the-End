@@ -9,6 +9,7 @@ using UnityEngine;
 // Inheriting from the Enemy class
 public class EnemyNormal : Enemy 
 {
+    // PLayer uses transform from Unity to update player x and y position.
 	public void Start() 
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();

@@ -707,7 +707,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1536587282}
-        m_MethodName: loadSaveData
+        m_MethodName: loadGameData
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1855,6 +1855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3af95f0acb0fafe4f826d5fab3b968f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _dataToSave: 
 --- !u!1 &1546142632
 GameObject:
   m_ObjectHideFlags: 0

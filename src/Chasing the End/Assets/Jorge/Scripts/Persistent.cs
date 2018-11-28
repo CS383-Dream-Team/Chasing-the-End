@@ -16,7 +16,7 @@ public class Persistent : MonoBehaviour
 {
     static protected int Lives = 3;
     static protected int Score = 0;
-    static protected string GameOver = "GameOVer";
+
 
     static protected Scene currentScene;
     static protected string nowScene;

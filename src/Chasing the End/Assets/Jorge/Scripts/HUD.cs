@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
-
+using System.Collections.Generic;
 
 public class HUD : MonoBehaviour
 {
@@ -13,13 +12,14 @@ public class HUD : MonoBehaviour
 
 
 
-
+    
 
     // Use this for initialization
     void Start()
     {
 
         Inventory.ItemAdded += IventoryScript_ItemAdded;
+        Debug.Log(Inventory.getNumberOfItems());
     }
 
 
@@ -35,7 +35,9 @@ public class HUD : MonoBehaviour
             // checks if the image was previously enable
             if (!image.enabled && image.sprite == null)
             {
-
+                List<I_IventoryItem> temp = Inventory.GetItemsList();
+                Debug.Log(temp.Count);
+                Debug.Log(Inventory.GetItemsList());
                 // Debug.Log(sender.ToString());
                 image.enabled = true;
                 image.sprite = e.Item.Image;
@@ -45,6 +47,8 @@ public class HUD : MonoBehaviour
         }
     }
 
+
+    
 
 
 

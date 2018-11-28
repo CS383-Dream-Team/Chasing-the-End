@@ -4874,6 +4874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3af95f0acb0fafe4f826d5fab3b968f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _dataToSave: 
 --- !u!1 &547593532
 GameObject:
   m_ObjectHideFlags: 0
@@ -5191,8 +5192,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a55d720916ef410faa4f9cf163e0a21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2.5
-  distanceToStop: 0
 --- !u!61 &777197631
 BoxCollider2D:
   m_ObjectHideFlags: 0

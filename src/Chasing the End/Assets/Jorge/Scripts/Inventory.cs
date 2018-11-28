@@ -46,5 +46,14 @@ public class Inventory : MonoBehaviour
         }
     }
 
-  
+    public int getNumberOfItems()
+    {
+        return mItems.Count;
+    }
+
+
+    public List<I_IventoryItem> GetItemsList()
+    {
+        return mItems;
+    }
 }

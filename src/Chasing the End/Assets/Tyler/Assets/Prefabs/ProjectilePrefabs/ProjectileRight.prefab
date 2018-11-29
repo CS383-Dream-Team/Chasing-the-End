@@ -120,7 +120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f9dfb37af53001448d0577197894740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
 --- !u!114 &114179717490626878
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -144,10 +143,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1335649629536056}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15c2ba4856ae0de4d98399a422821387, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ccf1eb90e221b7479d65eede976dbc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitSprite: {fileID: 21300000, guid: fad9b7d6b7a8e2c40b60b5449635b93d, type: 3}
 --- !u!212 &212336949079454330
 SpriteRenderer:
   m_ObjectHideFlags: 1

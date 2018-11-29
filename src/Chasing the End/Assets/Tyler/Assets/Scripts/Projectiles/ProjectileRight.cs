@@ -10,7 +10,6 @@ public class ProjectileRight : Projectile {
 		
 	}
 	
-	// Update is called once per frame
     // Setting direction of projectile to be shot
 	void Update ()
     {

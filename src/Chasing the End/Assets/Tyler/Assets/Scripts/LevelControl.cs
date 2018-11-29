@@ -31,6 +31,7 @@ public class LevelControl : MonoBehaviour {
         if (((other.gameObject.CompareTag("Player")) && (Inventory.getNumberOfItems()==1) && (sceneName =="Level1")) || ((other.gameObject.CompareTag("Player")) && (Inventory.getNumberOfItems() ==2) && (sceneName == "level2")) ||
                 ((other.gameObject.CompareTag("Player")) && (Inventory.getNumberOfItems() == 3) && (sceneName == "level3")) || ((other.gameObject.CompareTag("Player")) && (Inventory.getNumberOfItems() == 1) && (sceneName == "level4")))
         {
+            //Loads new scene, either by index or levelName.
             SceneManager.LoadScene(index);
             SceneManager.LoadScene(levelName);
         }

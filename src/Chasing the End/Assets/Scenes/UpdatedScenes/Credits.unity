@@ -383,7 +383,14 @@ MonoBehaviour:
 
 
 
-    Enemy Sprites:
+    Art/Sprites:
+
+
+
+
+
+
+
 
 
 
@@ -564,43 +571,15 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Brad Whitesell
-
-    Jorge Mendoza
-
-    Luke Brinkerhoff
-
-    Edgar Velazquez
-
-    Tyle Felps
-
-
-    "Little Shadow Monster" By bevouliin.com licensed CC-BY 4.0: https://opengameart.org/content/little-shadow-monster-sprites
-
-
-    "Chocolate Monster" By bevouliin.com licenced CC-BY 3.0: https://opengameart.org/content/chocolate-monster-sprite-sheets
-
-
-    By Rolemusic (Free Use):
-
-
-    "The Black"
-
-    "The Black Kitty"
-
-    "The Little Broth"
-
-    "The White"
-
-
-    By Bart(Free Use)
-
-
-    "Xeon Theme Remastered"
-
-
-
-'
+  m_Text: "Brad Whitesell\nJorge Mendoza\nLuke Brinkerhoff\nEdgar Velazquez\nTyle
+    Felps\n\n\"Little Shadow Monster\" By bevouliin.com licensed CC-BY 4.0: https://opengameart.org/content/little-shadow-monster-sprites\n\n\"Chocolate
+    Monster\" By bevouliin.com licenced CC-BY 3.0: https://opengameart.org/content/chocolate-monster-sprite-sheets\n\nRoguelike
+    Cave & Dungeons pack\r (Level Tilemap/Trap Sprite/Scripts)\nby Kenney Vleugels
+    for Kenney (www.kenney.nl)\r\nLicense (Creative Commons Zero, CC0)\r\nhttp://creativecommons.org/publicdomain/zero/1.0/\r\n\r\nYou
+    may use these graphics in personal and commercial projects.\r\nCredit (Kenney
+    or www.kenney.nl)\n\n\nBy Rolemusic (Free Use):\n\n\"The Black\"\n\"The Black
+    Kitty\"\n\"The Little Broth\"\n\"The White\"\n\nBy Bart(Free Use)\n\n\"Xeon Theme
+    Remastered\"\n\n\n"
 --- !u!222 &1331054600
 CanvasRenderer:
   m_ObjectHideFlags: 0

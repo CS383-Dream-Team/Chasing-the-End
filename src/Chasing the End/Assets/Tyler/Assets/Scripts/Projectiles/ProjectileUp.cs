@@ -10,9 +10,9 @@ public class ProjectileUp : Projectile {
     {
 		
 	}
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Setting direction of projectile to be shot
+    void Update ()
         {
             transform.position += transform.up * Time.deltaTime * speed;
         }

@@ -12,13 +12,16 @@ public class Hazard : MonoBehaviour
 {   
     void OnCollisionEnter2D(Collision2D coll)
     {
+        //checking if blade collides with player tag
         if (coll.transform.tag == "Player")
         {
+            //loads gameover scene if sprite collides with player
             SceneLoader sawBlade = new SceneLoader();
             sawBlade.Gameover();
         }
         else
         {
+            //destroying the sprite depending on time or collision with objects other than player
             if (transform.parent != null)
             {
                 Destroy(transform.parent.gameObject, 0.1f);

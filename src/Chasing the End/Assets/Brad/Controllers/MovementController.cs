@@ -7,7 +7,7 @@ using UnityEngine;
 /// The MovementController class contains the functionality for character movement.
 /// </summary>
 /// <remarks>
-/// MovementController requires the GameObject to have a Rigidbody component and a SpriteRenderer component.
+/// MovementController automatically adds a Rigidbody component and a SpriteRenderer component to the GameObject if they are missing.
 /// </remarks>
 [RequireComponent(typeof(Rigidbody), typeof(SpriteRenderer))]
 public class MovementController : MonoBehaviour, IMovementController
@@ -15,13 +15,14 @@ public class MovementController : MonoBehaviour, IMovementController
     #region Public Methods
 
     /// <summary>
-    /// This method sets the _rigidBody and _spriteRenderer field to those of our character's GameObject.
+    /// This method sets the _rigidBody and _spriteRenderer field to those of our character's GameObject, and we create a reference for our MovementData instance.
     /// </summary>
     /// <remarks>
     /// Start() is called on the frame when a script is enabled just before any of the "Update" methods are called the first time.
     /// </remarks>
     public void Start()
     {
+        _movementData = MovementData.GetMovementData();
         _rigidBody = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -56,7 +57,7 @@ public class MovementController : MonoBehaviour, IMovementController
     public void MoveCharacter()
     {
         Vector2 updateVelocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        _rigidBody.velocity = updateVelocity * _characterSpeed;
+        _rigidBody.velocity = updateVelocity * _movementData.CharacterSpeed;
     }
 
     /// <summary>
@@ -72,12 +73,12 @@ public class MovementController : MonoBehaviour, IMovementController
         _allowDash = false;
         _isDashing = true;
 
-        while (_dashDuration > elapsedDashTime)
+        while (_movementData.DashDuration > elapsedDashTime)
         {
             elapsedDashTime += Time.deltaTime;
 
             Vector2 updateVelocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-            _rigidBody.velocity = updateVelocity * _dashSpeed;
+            _rigidBody.velocity = updateVelocity * _movementData.DashSpeed;
 
             yield return null;
         }
@@ -105,13 +106,11 @@ public class MovementController : MonoBehaviour, IMovementController
 
     #region Private Fields
 
-    private static readonly float _characterSpeed = 10.0f;
-    private static readonly float _dashSpeed = 20.0f;
-    private static readonly float _dashDuration = 0.2f;
     private bool _allowDash = true;
     private bool _isDashing = false;
     private Rigidbody2D _rigidBody;
     private SpriteRenderer _spriteRenderer;
+    private MovementData _movementData;
 
     #endregion
 }

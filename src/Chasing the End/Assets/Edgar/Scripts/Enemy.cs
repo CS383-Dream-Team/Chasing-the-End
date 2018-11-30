@@ -7,6 +7,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// DistanceToStop float should remain 0 unless onCollisionEnter2D is removed.
 public class Enemy : MonoBehaviour 
 {
     protected Transform player; 

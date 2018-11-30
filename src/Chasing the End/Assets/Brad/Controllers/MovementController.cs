@@ -86,26 +86,6 @@ public class MovementController : MonoBehaviour, IMovementController
         _isDashing = false;
     }
 
-    public Inventory inventory;
-
-    /// <summary>
-    /// This Function is called when the player collides with an item. IF 
-    /// the item has componet of type I_IventoruItem than i gets added to the 
-    /// inventory.
-    /// </summary>
-    /// <param name="hit"> Colllision2D details of the item</param>
-    private void OnCollisionEnter2D(Collision2D hit)
-    {
-
-        I_IventoryItem item = hit.gameObject.GetComponent<I_IventoryItem>();
-        // if the item is the script the item proceds to call the iventory
-        if (item != null)
-        {
-            // reference to the Additem function in the class inventory 
-            inventory.AddItem(item);
-        }
-    }
-
     /// <summary>
     /// This method checks the rigidBody's velocity and toggles the flipx property of the spriteRenderer accordingly so that the character is facing the direction of travel.
     /// </summary>
@@ -125,9 +105,9 @@ public class MovementController : MonoBehaviour, IMovementController
 
     #region Private Fields
 
-    private readonly float _characterSpeed = 10.0f;
-    private readonly float _dashSpeed = 20.0f;
-    private readonly float _dashDuration = 0.2f;
+    private static readonly float _characterSpeed = 10.0f;
+    private static readonly float _dashSpeed = 20.0f;
+    private static readonly float _dashDuration = 0.2f;
     private bool _allowDash = true;
     private bool _isDashing = false;
     private Rigidbody2D _rigidBody;

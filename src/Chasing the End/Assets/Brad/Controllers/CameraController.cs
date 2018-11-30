@@ -6,8 +6,11 @@ using UnityEngine;
 /// <summary>
 /// The CameraController class contains the functionality for the camera's functionality.
 /// </summary>
-public class CameraController : MonoBehaviour, ICameraController {
-
+/// /// <remarks>
+/// It's the developers responsibility to assign the Character field to the appropriate Character GameObject in the scene.
+/// </remarks>
+public class CameraController : MonoBehaviour, ICameraController
+{
     #region Public Methods
 
     /// <summary>
@@ -26,7 +29,7 @@ public class CameraController : MonoBehaviour, ICameraController {
     /// </summary>
     public void SmoothCameraMovement()
     {
-        Vector3 targetPosition = _character.TransformPoint(_transformPointPosition);
+        Vector3 targetPosition = Character.TransformPoint(_transformPointPosition);
         transform.position = Vector3.SmoothDamp(current: transform.position, target: targetPosition, currentVelocity: ref _velocity, smoothTime: _smoothingTime);
     }
 
@@ -34,7 +37,7 @@ public class CameraController : MonoBehaviour, ICameraController {
 
     #region Public Fields
 
-    public Transform _character;
+    public Transform Character;
     
     #endregion
 

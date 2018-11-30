@@ -7,16 +7,20 @@ using System;
 public class DataManager : MonoBehaviour {
 
 
-    public string _dataToSave = "";
+    public string _dataToSave;
     private string gameDataFileName = "/Jorge/GameData/data.json";
 
     public void SaveData()
     {
 
-         _dataToSave = Persistent.GetInstance().GetRetryPoint();
-       
+         _dataToSave = String.Copy(Persistent.GetInstance().GetRetryPoint());
+
+        Debug.Log(_dataToSave);
+
+
         Debug.Log(this.ToString());
         string dataAsJson = JsonUtility.ToJson(this);
+        
 
         string filePath = Application.dataPath + gameDataFileName;
        // Debug.Log(temp);

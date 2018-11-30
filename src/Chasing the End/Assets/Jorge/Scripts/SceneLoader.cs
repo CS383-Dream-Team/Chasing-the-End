@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -28,7 +27,7 @@ public class SceneLoader : MonoBehaviour {
     /// Typically should be the Main Menu scene that should be loaded 
     /// with calling this fuction.
     /// </summary>
-    public void BackToMain()
+   public void BackToMain()
     {
         SceneManager.LoadScene(0);
     }
@@ -53,9 +52,6 @@ public class SceneLoader : MonoBehaviour {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-
-
-
     /// <summary>
     /// Returns the name of the Active scene
     /// </summary>
@@ -68,5 +64,5 @@ public class SceneLoader : MonoBehaviour {
         return nameOfScene.name; 
     }
 
-
+ 
 }

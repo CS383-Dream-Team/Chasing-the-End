@@ -2,22 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-public class MainMenu : MonoBehaviour {
-
-
-    private SceneLoader load = new SceneLoader();
-
-
-
+/// <summary>
+/// Script used for the main Menu of the Game
+/// </summary>
+public class MainMenu : SceneLoader {
 
     // this function is called from the New game mainmenu canvas 
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
     }
-
 
     // this function is called form the quit buttom in the main menu canvas 
     public void QuitGame()
@@ -25,15 +19,9 @@ public class MainMenu : MonoBehaviour {
         Application.Quit();
     }
 
-
-    // this function is called to return to the main menu  
-    public void BackToMain()
-    {
-        SceneManager.LoadScene(0);
-    }
-
-
-
+    /// <summary>
+    /// called to check what was the last level and to load it
+    /// </summary>
     public void retry()
     {
         string againTry;
@@ -44,7 +32,7 @@ public class MainMenu : MonoBehaviour {
         }
         else
         {
-            load.SceneToLoad(againTry);
+             SceneToLoad(againTry);
         }
     }
 

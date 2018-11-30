@@ -12,15 +12,11 @@ using UnityEngine.SceneManagement;
 /// active instance it will autodestroy to keep the first one only. 
 /// can keep track of items or objects througt loading screens. 
 /// </summary>
-public class Persistent : MonoBehaviour
+public class Persistent : SceneLoader
 {
-    static protected int Lives = 3;
-    static protected int Score = 0;
-
-
     static protected Scene currentScene;
-    static protected string nowScene;
-    static protected string retryPoint;
+    protected string nowScene;
+    protected string retryPoint;
     static protected List<I_IventoryItem> inventoryItems;
 
     static Persistent FirstInstance;    //Static first instance is the only instance in the game 
@@ -29,21 +25,15 @@ public class Persistent : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        // saves the name of the current and last scene for retry point
-
-
         if (FirstInstance != null)
         {
-
             Destroy(this.gameObject);
             return;
         }
-
         FirstInstance = this;
         GameObject.DontDestroyOnLoad(this.gameObject);
         SavecurrentScene();
     }
-
 
     //  
     /// <summary>
@@ -56,47 +46,26 @@ public class Persistent : MonoBehaviour
         return FirstInstance;
     }
 
-
-
     /* this gets called when the objects is about to be destroy i could save the player position and 
      position of the enemy if i needs to for the save. Optional, i could also reset to the last previous of the reset of the game*/
     public void OnDestroy()
     {
-
-
         //Debug.Log("GamePersist was destroy");
     }
 
-
     public void SavecurrentScene()
     {
-        currentScene = SceneManager.GetActiveScene();
-
-        nowScene = currentScene.name;
+        nowScene = getCurrentSceneName();
         retryPoint = nowScene;
-
     }
 
     /// <summary>
     ///  gets the last scene. This can be used to for the retry point from the class
     /// </summary>
-    /// <returns></returns>
+    /// <returns>Last Scene Name </returns>
     public string GetRetryPoint()
     {
         return retryPoint;
     }
-
-
-    // Adds Score to the scoreboard its public take
-    public void AddScore(int s)
-    {
-        Score += s;
-    }
-    // gets the score from the class
-    public int GetScore()
-    {
-        return Score;
-    }
-
 
 }

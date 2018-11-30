@@ -46,14 +46,14 @@ public class Inventory : MonoBehaviour
         }
     }
 
+
+    /// <summary>
+    /// gets the total number of items in the inventory
+    /// </summary>
+    /// <returns>number of items</returns>
     public int getNumberOfItems()
     {
         return mItems.Count;
     }
 
-
-    public List<I_IventoryItem> GetItemsList()
-    {
-        return mItems;
-    }
 }

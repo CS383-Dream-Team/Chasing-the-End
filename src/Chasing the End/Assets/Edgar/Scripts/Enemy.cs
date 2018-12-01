@@ -10,9 +10,13 @@ using UnityEngine.SceneManagement;
 // DistanceToStop float should remain 0 unless onCollisionEnter2D is removed.
 public class Enemy : MonoBehaviour 
 {
-    protected Transform player; 
+    // Transform player is defined in the inherited files and contains the characters x and y position.
+    protected Transform player;
+    // distanceToStop can be increased so player and enemy don't collide.
     public static float distanceToStop = 0;
+    // speed is a public var that can be changed in the isnpector in Unity.
     public float speed;
+    // facingRight changes in the inherited files as enemy follows main character. 
     protected bool facingRight = false;
 
     /// <summary>

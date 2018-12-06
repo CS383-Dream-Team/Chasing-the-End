@@ -4,50 +4,37 @@ using UnityEngine;
 using System.IO;
 using System;
 
-public class DataManager : MonoBehaviour {
 
-
-    public string _dataToSave;
-    private string gameDataFileName = "/Jorge/GameData/data.json";
-
+public class DataManager : SceneLoader {
+    // path to where the data is saveed at. MUST EXIST FOR THE FUEATURE TO WORK!!!
+    static private string gameDataFileName = "/Jorge/GameData/data.json";
+    /// <summary>
+    /// Saves the game data when the user prefers to save.
+    /// </summary>
     public void SaveData()
     {
-
-         _dataToSave = String.Copy(Persistent.GetInstance().GetRetryPoint());
-
-        Debug.Log(_dataToSave);
-
-
-        Debug.Log(this.ToString());
-        string dataAsJson = JsonUtility.ToJson(this);
-        
-
+        string _dataToSave = String.Copy(Persistent.GetInstance().GetRetryPoint());
+        DataToSave io = new DataToSave(_dataToSave);
+     
+        string dataAsJson = JsonUtility.ToJson(io);
         string filePath = Application.dataPath + gameDataFileName;
-       // Debug.Log(temp);
+     
 
         File.WriteAllText(filePath, dataAsJson);
-        Debug.Log("Saving Now");
+   }
 
-    }
-
+    /// <summary>
+    /// loads the game data from the previous game
+    /// </summary>
     public void loadGameData()
     {
         string filePath = Application.dataPath + gameDataFileName;
-        Debug.Log(filePath);
-       // Debug.Log("i wonder");
-      //  Debug.Log(Application.dataPath);
-
         if (File.Exists(filePath))
         {
             string dataAsJson = File.ReadAllText(filePath);
-
-            Debug.Log(dataAsJson);
-           
-
-            
-
-            Debug.Log(JsonUtility.FromJson<DataManager>(dataAsJson));
-        }   
+             DataToSave O = JsonUtility.FromJson<DataToSave>(dataAsJson);
+            SceneToLoad(O.retryPoint);
+         }   
         else
         {
             Debug.LogError("Cannot Loat game Data!");

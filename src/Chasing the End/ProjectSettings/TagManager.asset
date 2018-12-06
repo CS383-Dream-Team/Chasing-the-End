@@ -11,6 +11,8 @@ TagManager:
   - Door
   - Trap
   - Circle Key
+  - InventoryHUDCanvas
+  - InGameMenu
   layers:
   - Default
   - TransparentFX

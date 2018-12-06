@@ -36,4 +36,9 @@ public class MainMenu : SceneLoader {
         }
     }
 
+    public void ReturnToMain()
+    {
+        SceneToLoad("MainMenu");
+    }
+
 }

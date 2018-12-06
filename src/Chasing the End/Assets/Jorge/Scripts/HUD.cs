@@ -9,14 +9,16 @@ public class HUD : MonoBehaviour
     // Inventory public used that allows the inventory prefab to be drop in the inspector. 
     // will receive the status of the inventory
     public Inventory Inventory;
-
+    public GameObject optionsPanel;
+    private Canvas optionsPanele;
 
     // Use this for initialization
     void Start()
     {
-        Inventory.ItemAdded += IventoryScript_ItemAdded;  
+        Inventory.ItemAdded += IventoryScript_ItemAdded;
+        optionsPanel = GameObject.Find("InGameMenu");
+      
     }
-
 
     public void IventoryScript_ItemAdded(object sender, InventoryEventArgs e)
     {
@@ -38,41 +40,27 @@ public class HUD : MonoBehaviour
         }
     }
 
-
-    
-
-
-
-
-
-
+    // saves the scene before the scene is destroyed.
     private void OnDestroy()
     {
-
         Persistent.GetInstance().SavecurrentScene();
-
     }
 
      void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Backspace))
+        // call for displaying the options menu while the player plays
+        if(Input.GetKeyDown(KeyCode.Escape))
         {
-           // string jorge = GetComponentInChildren<TMPro.TextMeshProUGUI>().text;
-            //Transform Parent = transform.Find("GameMenu");
-            //Debug.Log(jorge);
-            
-            // GameObject one = GetComponent<GameMene>();
 
-//            Parent.disable;
-            //Debug.Log(Parent.GetChild(0).name);
-            Debug.Log("calling the backspace button");
+            Debug.Log("calling");
+            check();
         }
     }
 
 
-
-
-
-
-
+    private void check()
+    {
+        Debug.Log("calling check");
+        optionsPanel.gameObject.SetActive(true);
+    }
 }

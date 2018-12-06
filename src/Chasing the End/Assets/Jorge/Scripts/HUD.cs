@@ -15,7 +15,7 @@ public class HUD : MonoBehaviour
     void Start()
     {
         Inventory.ItemAdded += IventoryScript_ItemAdded;
-        optionsPanel = GameObject.Find("InGameMenu");
+
       
     }
 

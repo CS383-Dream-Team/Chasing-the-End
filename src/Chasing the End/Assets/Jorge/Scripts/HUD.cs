@@ -10,7 +10,6 @@ public class HUD : MonoBehaviour
     // will receive the status of the inventory
     public Inventory Inventory;
     public GameObject optionsPanel;
-    private Canvas optionsPanele;
 
     // Use this for initialization
     void Start()
@@ -51,16 +50,8 @@ public class HUD : MonoBehaviour
         // call for displaying the options menu while the player plays
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-
-            Debug.Log("calling");
-            check();
+            optionsPanel.gameObject.SetActive(true);
         }
     }
 
-
-    private void check()
-    {
-        Debug.Log("calling check");
-        optionsPanel.gameObject.SetActive(true);
-    }
 }
